@@ -1,5 +1,5 @@
 <templateSet group="JavaScript">
-  <template name="rest:try" value="try{&#10;    $END$&#10;}catch(e){&#10;    helper.internalError(e.message, res);&#10;}" description="Try catch for rest server" toReformat="true" toShortenFQNames="true">
+  <template name="rest:try" value="try{&#10;    $END$&#10;    res.status(200).send({&#10;        success: true&#10;    })&#10;}catch(e){&#10;    helper.internalError(e.message, res);&#10;}" description="Try catch for rest server" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
