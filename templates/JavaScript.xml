@@ -10,4 +10,10 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
+  <template name="ts:f" value="async $FUNC$(req: Request, res: Response) {&#10;    try {&#10;        $END$&#10;    }&#10;    catch(e){&#10;        res.status(500).send(e);&#10;    }&#10;}&#10;" description="RestFul ts function" toReformat="false" toShortenFQNames="true">
+    <variable name="FUNC" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
 </templateSet>
