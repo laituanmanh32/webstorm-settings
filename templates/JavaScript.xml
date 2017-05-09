@@ -10,7 +10,7 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="ts:f" value="async $FUNC$(req: Request, res: Response) {&#10;        try {&#10;            $END$&#10;        }&#10;        catch (e) {&#10;            return helper.error(res, {&#10;                code: ErrorCode.SERVER_INTERNAL_ERROR,&#10;                message: 'Server internal error',&#10;                error: e&#10;            });&#10;        }&#10;    }" description="Typescript Resful function" toReformat="true" toShortenFQNames="true">
+  <template name="ts:f" value="async $FUNC$(req: Request, res: Response) {&#10;        try {&#10;            $END$&#10;        }&#10;        catch (e) {&#10;            return helper.error(res, {&#10;                code: ErrorCode.SERVER_INTERNAL_ERROR,&#10;                message: 'Server internal error',&#10;                error: e.message&#10;            });&#10;        }&#10;    }" description="Typescript Resful function" toReformat="true" toShortenFQNames="true">
     <variable name="FUNC" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="TypeScript" value="true" />
